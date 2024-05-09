@@ -1,0 +1,120 @@
+.conteudo{
+    width: 70%;
+    min-height: 95vh;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+.icon-btn-img{
+    width: 30px;
+    background-color: transparent;
+    border: none;
+}
+.section-info-usuario{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 50%;
+    margin: 5px;
+    padding: 20px;
+}
+.section-info-usuario img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.container-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.container-info p{
+    margin: 0;
+}
+.container-info h4{
+    color: var(--cor-primaria-escura);
+    font-weight: 500;
+}
+.container-biografia{
+    justify-content: center;
+}
+/* Endereço */
+.titulo-endereco{
+    font-weight: 500;
+    color: #000000;
+}
+.container-endereco{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+.container-endereco p{
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 0;
+}
+
+/* Accordion */
+.section-accordion-formulario{
+    width: 50%;
+    margin: 5px;
+    padding: 20px;
+}
+.section-accordion-formulario hr{
+    background-color: var(--cor-primaria-escura);
+    height: 2px;
+}
+.input-medio{
+    width: 50%;
+}
+.container-btn-submit{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1440px) {
+    .conteudo{
+        width: 80%;
+    }
+    .section-info-usuario, .section-accordion-formulario{
+        width: 80%;
+    }
+}
+@media (max-width: 1024px) {
+    .conteudo{
+        width: 100%;
+        min-height: 98vh;
+    }
+    .section-info-usuario, .section-accordion-formulario{
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .section-info-usuario img{
+        width: 120px;
+        height: 120px;
+    }
+    .section-info-usuario p{
+        font-size: 14px;
+    }
+    .container-btn-submit{
+        justify-content: center;
+    }
+    .container-btn-submit button{
+        width: 100%;
+    }
+}

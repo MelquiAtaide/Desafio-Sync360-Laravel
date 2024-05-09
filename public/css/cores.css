@@ -1,0 +1,10 @@
+/* Definição das variáveis de cor */
+:root {
+    --cor-primaria-claro: #447a37;
+    --cor-secundaria-claro: #335c29;
+    --cor-secundaria-escura: #223d1c;
+    --cor-primaria-escura: #111f0e;
+    --cor-destaque: #ffc107;
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #343a40;
+  }
