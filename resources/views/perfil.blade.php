@@ -41,7 +41,7 @@
             </div>
             <div class="container-info">
                 <h4>{{ $usuario->nome }}</h4>
-                <p>{{ date('d/m/Y', strtotime($usuario->data_nascimento)) }} - 23 anos</p>
+                <p>{{ date('d/m/Y', strtotime($usuario->data_nascimento)) }} - {{ $idade }} anos</p>
             </div>
             <div class="d-flex container-biografia">
                 <p>{{ $usuario->biografia }}</p>

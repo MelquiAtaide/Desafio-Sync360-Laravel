@@ -6,6 +6,7 @@ use App\Http\Requests\UploadImgRequest;
 use App\Http\Requests\UsuarioRequest;
 use App\Models\Endereco;
 use App\Models\Usuario;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 
@@ -14,7 +15,16 @@ class UsuarioController extends Controller
     public function perfil(){
         $usuario = Usuario::findOrFail(1);
 
-        return view('perfil', ['usuario' => $usuario]);
+        // Calculo da idade do usuário
+        $dataNascimento = $usuario->data_nascimento;
+        $dataNascimento = Carbon::createFromFormat('Y-m-d', $dataNascimento);
+        $dataAtual = Carbon::now();
+        $idade = $dataAtual->diffInYears($dataNascimento);
+
+        return view('perfil', [
+            'usuario' => $usuario,
+            'idade'   => $idade,
+        ]);
     }
     public function editarUsuario(UsuarioRequest $request, $id){
         try {
